@@ -9,13 +9,10 @@
 #include <noiseutils.h>
 #include <time.h>
 #include <chrono>
+#include <memory>
 
 #include <GL/glew.h>
 #include <GLFW/glfw3.h>
 #include <OpenGL/gl.h>
 #include <glm/glm.hpp>
 #include <glm/gtc/matrix_transform.hpp>
-
-using namespace std;
-using namespace noise;
-using namespace glm;

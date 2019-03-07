@@ -1,6 +1,10 @@
 #include "pch.hpp"
+#include "globals.hpp"
+#include "worm.hpp"
+#include "shader.hpp"
+#include "window.hpp"
+#include "tile.hpp"
 
-module::Perlin pnoise;
-bool running;
-int seed;
-GLFWwindow* window;
+noise::module::Perlin pnoise;
+std::unique_ptr<Window> window;
+std::vector<Tile> tiles;

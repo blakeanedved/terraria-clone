@@ -2,8 +2,8 @@
 
 extern const int WORM_MIN_LENGTH;
 extern const int WORM_MAX_LENGTH;
-extern vector<vector<int> > map;
-extern module::Perlin pnoise;
+extern std::vector<std::vector<int> > map;
+extern noise::module::Perlin pnoise;
 
 struct Point {
 	int x, y;

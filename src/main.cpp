@@ -13,9 +13,9 @@ int main(){
 
 	Texture tex1("resources/images/sunflower.png");
 
-	// tiles.push_back(std::unique_ptr<Tile>(new Tile(-0.75f, -0.75f, 0, glm::vec4(1.0f, 0.0f, 0.0f, 1.0f))));
+	tiles.push_back(std::unique_ptr<Tile>(new Tile(-0.75f, -0.75f, 0, glm::vec4(1.0f, 0.0f, 0.0f, 1.0f))));
 	tiles.push_back(std::unique_ptr<Tile>(new Tile(-0.5f, -0.5f, 0, glm::vec4(0.0f, 1.0f, 0.0f, 1.0f))));
-	// tiles.push_back(std::unique_ptr<Tile>(new Tile(-0.25f, -0.25f, 0, glm::vec4(0.0f, 0.0f, 1.0f, 1.0f))));
+	tiles.push_back(std::unique_ptr<Tile>(new Tile(-0.25f, -0.25f, 0, glm::vec4(0.0f, 0.0f, 1.0f, 1.0f))));
 
 	glm::mat4 Projection = glm::perspective(glm::radians(45.0f), (float)width / (float)height, 0.1f, 100.0f);
 

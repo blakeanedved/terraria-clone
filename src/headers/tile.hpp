@@ -10,7 +10,7 @@ private:
 	GLuint vaoID;
 	GLuint iboID;
 	GLuint vboID;
-	GLfloat verts[8];
+	GLfloat verts[16];
 	glm::vec4 color;
 	glm::vec2 position;
 	int type;

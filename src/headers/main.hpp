@@ -4,7 +4,8 @@
 #include "shader.hpp"
 #include "window.hpp"
 #include "tile.hpp"
+#include "texture.hpp"
 
 noise::module::Perlin pnoise;
 std::unique_ptr<Window> window;
-std::vector<Tile> tiles;
+std::vector<std::unique_ptr<Tile>> tiles;

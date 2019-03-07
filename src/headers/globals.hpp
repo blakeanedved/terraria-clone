@@ -5,7 +5,7 @@
 
 extern bool running;
 
-extern std::vector<std::vector<int> > map;
+extern std::vector<std::vector<int>> map;
 extern module::Perlin pnoise;
 extern const int WORM_MIN_LENGTH = 175;
 extern const int WORM_MAX_LENGTH = 250;

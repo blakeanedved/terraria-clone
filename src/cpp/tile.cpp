@@ -7,12 +7,20 @@ Tile::Tile(float x, float y, int type, glm::vec4 color){
 	this->type = type;
 	this->verts[0] = x;
 	this->verts[1] = y;
-	this->verts[2] = x + 1.f;
-	this->verts[3] = y;
-	this->verts[4] = x;
-	this->verts[5] = y + 1.f;
-	this->verts[6] = x + 1.f;
-	this->verts[7] = y + 1.f;
+	this->verts[2] = 0.0f;
+	this->verts[3] = 0.0f;
+	this->verts[4] = x + 1.0f;
+	this->verts[5] = y;
+	this->verts[6] = 1.0f;
+	this->verts[7] = 0.0f;
+	this->verts[8] = x;
+	this->verts[9] = y + 1.0f;
+	this->verts[10] = 0.0f;
+	this->verts[11] = 1.0f;
+	this->verts[12] = x + 1.0f;
+	this->verts[13] = y + 1.0f;
+	this->verts[14] = 1.0f;
+	this->verts[15] = 1.0f;
 
 	GLuint indices[] = {
 		0, 1, 2,
@@ -27,7 +35,9 @@ Tile::Tile(float x, float y, int type, glm::vec4 color){
 	glBufferData(GL_ARRAY_BUFFER, sizeof(this->verts), this->verts, GL_DYNAMIC_DRAW);
 	
 	glEnableVertexAttribArray(0);
-	glVertexAttribPointer(0, 2, GL_FLOAT, GL_FALSE, sizeof(GLfloat) * 2, (void*)0);
+	glVertexAttribPointer(0, 2, GL_FLOAT, GL_FALSE, sizeof(GLfloat) * 4, (const void*)0);
+	glEnableVertexAttribArray(1);
+	glVertexAttribPointer(1, 2, GL_FLOAT, GL_FALSE, sizeof(GLfloat) * 4, (const void*)(2*sizeof(GLfloat)));
 
 	glGenBuffers(1, &this->iboID);
 	glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, this->iboID);

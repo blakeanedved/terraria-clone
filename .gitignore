@@ -1,3 +1,4 @@
 main
 .DS_Store
 src/precompiled/pch.hpp.gch
+src/precompiled/globals.hpp.gch

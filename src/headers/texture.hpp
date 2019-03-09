@@ -4,16 +4,17 @@
 #include "pch.hpp"
 
 class Texture {
-private:
-	unsigned char* localBuffer;
-	int width, height, channels;
-	GLuint textureID;
-public:
-	Texture(const std::string& filepath);
-	~Texture();
+  private:
+    unsigned char *localBuffer;
+    int width, height, channels;
+    GLuint textureID;
 
-	auto Bind(GLuint slot = 0) -> void;
-	auto Unbind() -> void;
+  public:
+    Texture(const std::string &filepath);
+    ~Texture();
+
+    auto Bind(GLuint slot = 0) -> void;
+    auto Unbind() -> void;
 };
 
 #endif

@@ -2,24 +2,23 @@
 #define _TC_TILE_HPP_
 #include "pch.hpp"
 
-// float TileWidth = 0.5f;
-// float TileHeight = 0.5f;
+extern float TileWidth;
+extern float TileHeight;
 
 class Tile {
-private:
-	GLuint vaoID;
-	GLuint iboID;
-	GLuint vboID;
-	GLfloat verts[16];
-	glm::vec4 color;
-	glm::vec2 position;
-	int type;
+  private:
+    GLuint vaoID;
+    GLuint iboID;
+    GLuint vboID;
+    GLfloat verts[16];
+    glm::vec2 position;
+    int type;
 
-public:
-	Tile(float x, float y, int type, glm::vec4 color);
-	~Tile();
-	auto SetColor(GLuint uniform) -> void;
-	auto Render() -> void;
+  public:
+    Tile(float x, float y, int type);
+    ~Tile();
+
+    auto Render() -> void;
 };
 
 #endif

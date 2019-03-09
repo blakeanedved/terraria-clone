@@ -3,16 +3,16 @@
 #include "pch.hpp"
 
 class Window {
-private:
-	GLFWwindow* window;
-	int width, height;
+  private:
+    GLFWwindow *window;
+    int width, height;
 
-public:
-	Window(int width, int height, char* title);
-	~Window();
-	auto IsKeyDown(int key) -> bool;
-	auto ShouldClose() -> bool;
-	auto PollEvents() -> void;
+  public:
+    Window(int width, int height, char *title);
+    ~Window();
+    auto IsKeyDown(int key) -> bool;
+    auto ShouldClose() -> bool;
+    auto PollEvents() -> void;
 };
 
 #endif

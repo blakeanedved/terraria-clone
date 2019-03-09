@@ -1,15 +1,15 @@
-#include <iostream>
-#include <fstream>
-#include <sstream>
-#include <cmath>
-#include <stdlib.h>
-#include <noise/noise.h>
-#include <vector>
 #include <algorithm>
-#include <noiseutils.h>
-#include <time.h>
 #include <chrono>
+#include <cmath>
+#include <fstream>
+#include <iostream>
 #include <memory>
+#include <noise/noise.h>
+#include <noiseutils.h>
+#include <sstream>
+#include <stdlib.h>
+#include <time.h>
+#include <vector>
 
 #include <GL/glew.h>
 #include <GLFW/glfw3.h>

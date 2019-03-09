@@ -1,5 +1,8 @@
 all:src/main.cpp clean
-	g++ -o main src/main.cpp src/cpp/window.cpp src/cpp/tile.cpp src/cpp/texture.cpp -std=c++17 -Isrc/headers -Isrc/precompiled -framework GLUT -framework OpenGL -O2 -lm -lpthread -L/usr/local/lib -lnoise -lglfw -lglew
+	g++ -o main src/main.cpp src/player.cpp src/window.cpp src/tilemap.cpp src/texture.cpp src/noisegenerator.cpp -std=c++17 -Isrc/headers -Isrc/precompiled -framework GLUT -framework OpenGL -O2 -lm -lpthread -L/usr/local/lib -lnoise -lglfw -lglew
+
+debug:src/main.cpp clean
+	g++ -g -o main src/main.cpp src/player.cpp src/window.cpp src/tilemap.cpp src/texture.cpp src/noisegenerator.cpp -std=c++17 -Isrc/headers -Isrc/precompiled -framework GLUT -framework OpenGL -O2 -lm -lpthread -L/usr/local/lib -lnoise -lglfw -lglew
 
 pch:src/headers/pch.hpp
 	rm -rf src/precompiled/pch.hpp.gch
@@ -17,4 +20,4 @@ clean_precompiles:
 	rm -rf src/precompiled/*
 
 clean:
-	rm -rf build/*
+	rm -rf main

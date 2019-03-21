@@ -5,25 +5,28 @@
 
 class Player {
   private:
-    glm::vec2 pos;
+    glm::vec2 tilePos;
+    glm::vec2 worldPos;
     glm::vec2 vel;
     std::unique_ptr<Texture> texture;
     GLuint vboID, vaoID, iboID;
-    GLfloat VBO[16] = {
-        100.f, 100.f, 0.f, 0.f, 150.f, 100.f, 1.f, 0.f,
-        100.f, 150.f, 0.f, 1.f, 150.f, 150.f, 1.f, 1.f,
-    };
+    GLfloat VBO[16];
     GLuint IBO[6] = {0, 1, 2, 1, 2, 3};
+    float movementSpeed = 200.0f;
 
   public:
     Player(glm::vec2 pos);
     ~Player();
 
+    auto GetWorldX() -> float;
+    auto GetWorldY() -> float;
+    auto GetTileX() -> int;
+    auto GetTileY() -> int;
     auto Update(double dt) -> void;
     auto Render() -> void;
 
-  private:
-    auto UpdatePos() -> void;
+    // private:
+    //   auto UpdatePos() -> void;
 };
 
 #endif

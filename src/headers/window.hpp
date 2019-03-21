@@ -10,6 +10,9 @@ class Window {
   public:
     Window(int width, int height, char *title);
     ~Window();
+
+    auto Width() -> int;
+    auto Height() -> int;
     auto IsKeyDown(int key) -> bool;
     auto ShouldClose() -> bool;
     auto PollEvents() -> void;

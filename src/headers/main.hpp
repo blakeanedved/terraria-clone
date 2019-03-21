@@ -1,3 +1,4 @@
+#include "camera.hpp"
 #include "globals.hpp"
 #include "noisegenerator.hpp"
 #include "pch.hpp"
@@ -13,6 +14,7 @@ std::unique_ptr<Window> window;
 std::unique_ptr<NoiseGenerator> noisegen;
 std::unique_ptr<TileMap> tm;
 std::unique_ptr<Player> player;
+std::unique_ptr<Camera> camera;
 int seed;
 
 extern const double SCALE = 300.0;

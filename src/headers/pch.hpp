@@ -3,11 +3,13 @@
 #include <cmath>
 #include <fstream>
 #include <iostream>
+#include <map>
 #include <memory>
 #include <noise/noise.h>
 #include <noiseutils.h>
 #include <sstream>
 #include <stdlib.h>
+#include <string>
 #include <time.h>
 #include <vector>
 

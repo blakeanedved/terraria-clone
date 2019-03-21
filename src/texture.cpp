@@ -7,7 +7,8 @@ Texture::Texture(const std::string &filepath) {
     this->localBuffer = stbi_load(filepath.c_str(), &this->width, &this->height,
                                   &this->channels, 4);
 
-    std::cout << "(" << this->width << "," << this->height << ")" << std::endl;
+    // std::cout << "(" << this->width << "," << this->height << ")" <<
+    // std::endl;
 
     glGenTextures(1, &this->textureID);
     glBindTexture(GL_TEXTURE_2D, this->textureID);

@@ -26,6 +26,7 @@ class TileMap {
     auto DecrementColumn() -> void;
     auto IncrementRow() -> void;
     auto DecrementRow() -> void;
+    auto GetWorldTile(int tileColumn, int tileRow) -> int;
 };
 
 #endif

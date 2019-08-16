@@ -211,3 +211,10 @@ auto TileMap::DecrementRow() -> void {
     this->tiles.insert(this->tiles.begin(), temp);
     this->tiles.pop_back();
 }
+
+auto TileMap::GetWorldTile(int tileColumn, int tileRow) -> int {
+    int grassValue =
+        noisegen->Get(tileColumn * this->TILE_SIZE, tileRow * this->TILE_SIZE,
+                      0.f, TERRAIN_MIN_HEIGHT, TERRAIN_MAX_HEIGHT);
+    return grassValue;
+}
